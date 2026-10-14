@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+    <title>YouAfrika</title>
+    <meta name="description" content="YouAfrika, le YouTube de l'éducation : apprenez, enseignez et partagez vos savoirs." />
+    <!-- Aperçu par défaut quand on partage le site (les liens de vidéos, directs et ressources ont le leur : netlify/edge-functions/preview.ts) -->
+    <meta property="og:site_name" content="YouAfrika" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="YouAfrika · Apprenez, où que vous soyez" />
+    <meta property="og:description" content="Le YouTube de l'éducation : apprenez, enseignez et gagnez." />
+    <meta property="og:image" content="https://eduafriquee.netlify.app/icons/icon-512.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#020817" />
+    <!-- Application installable (PWA) -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <!-- Installation (PWA) : le navigateur n'envoie « beforeinstallprompt » qu'une fois, parfois avant le chargement de l'application ; on le garde ici dès le départ. -->
+    <script>
+      window.__yaInstall = null; window.__yaInstalled = false;
+      window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); window.__yaInstall = e; });
+      window.addEventListener('appinstalled', function () { window.__yaInstall = null; window.__yaInstalled = true; });
+    </script>
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="YouAfrika" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <style id="expo-reset">
+      html, body { height: 100%; background: #020817; }
+      body { overflow: hidden; }
+      * { -webkit-tap-highlight-color: transparent; }
+      #root { display: flex; height: 100%; flex: 1; }
+    </style>
+  </head>
+  <body>
+    <noscript>Activez JavaScript pour utiliser YouAfrika.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
